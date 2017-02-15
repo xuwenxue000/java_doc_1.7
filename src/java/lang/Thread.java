@@ -386,6 +386,7 @@ class Thread implements Runnable {
     /**
      * 给scheduler用来释放当前使用的cpu的机会,定时器空闲时忽略这个机会
      * Yield(释放) 是一个去改善多线程之间相关进展来提高cpu利用率的探试,它的使用应该结合详细的剖析和基准测试确保它有预期的效果。
+     * 很少的情况会适合使用这个方法。它可能为了调试或测试的目的,可以为复现bug创造线程竞争的条件,它还可以帮助像(java.util.concurrent.locks)包下的做并发控制框架的设计
      */
     public static native void yield();
 
