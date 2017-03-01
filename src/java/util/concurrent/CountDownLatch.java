@@ -34,8 +34,8 @@
  */
 
 package java.util.concurrent;
-import java.util.concurrent.locks.*;
-import java.util.concurrent.atomic.*;
+
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 /**
  * A synchronization aid that allows one or more threads to wait until
